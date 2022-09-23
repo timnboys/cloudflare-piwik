@@ -32,7 +32,6 @@ function CfUxWizz(config) {
     this.config = {
         id: 1,
         url: false,
-        prependDomain: false,
         ssl: false
     };
 
@@ -59,11 +58,6 @@ CfUxWizz.prototype.load = function() {
             var UST = UST || { s: Date.now(), addTag: function(tag) { UST_CT.push(tag) }};
             UST.addEvent = UST.addTag;
             var datenow = Date.now();
-            
-
-            if (truthy(this.config.prependDomain)) {
-                _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-            }
 
             var g = document.createElement("script");
             var s = document.getElementsByTagName("script")[0];
