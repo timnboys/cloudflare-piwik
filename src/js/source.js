@@ -33,7 +33,6 @@ function CfUxWizz(config) {
         id: 1,
         url: false,
         prependDomain: false,
-        setDomainCookie: false,
         ssl: false
     };
 
