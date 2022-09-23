@@ -12,7 +12,7 @@ var gulp = require("gulp"),
     ];
 
 gulp.task("uglify", function() {
-    return gulp.src(__dirname + "/src/js/piwik.js")
+    return gulp.src(__dirname + "/src/js/uxwizz.js")
         .pipe(insert({
             "/* source.js */": "src/js/source.js"
         }))
