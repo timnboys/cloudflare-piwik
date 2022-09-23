@@ -1,22 +1,22 @@
 {
-  "name": "cloudflare-for-piwik",
+  "name": "cloudflare-for-uxwizz",
   "version": "0.1.5",
-  "description": "Piwik integration for CloudFlare",
+  "description": "UXWizz integration for CloudFlare",
   "main": "karma.conf-ci.js",
   "keywords": [
-    "piwik",
+    "uxwizz",
     "analytics",
     "cloudflare"
   ],
   "bugs": {
-    "url": "http://github.com/bradberger/piwik-cloudflare/issues",
-    "email": "brad@bradb.net"
+    "url": "https://github.com/timnboys/cloudflare-uxwizz/issues",
+    "email": "admin@cubedata.net"
   },
   "license": "MPL-2.0",
   "author": {
-    "name": "Brad Berger",
-    "email": "brad@bradb.net",
-    "url": "https://bradb.net"
+    "name": "CubeData",
+    "email": "admin@cubedata.net",
+    "url": "https://cubedata.net"
   },
   "dependencies": {},
   "devDependencies": {
