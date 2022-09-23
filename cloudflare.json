@@ -1,8 +1,8 @@
 {
-    "main":"public/javascripts/piwik.js",
-    "name":"Piwik Analytics",
-    "description": "Integrate Piwik open source web analytics in your website. To use this app you need your own <a href='https://www.cloudflare.com/apps/piwik_open_source_web_analytics'>Piwik instance</a> (Self-hosted or Cloud-hosted).",
-    "version": "0.1.5",
+    "main":"public/javascripts/uxwizz.js",
+    "name":"UXWizz Analytics",
+    "description": "Integrate UXWizz web analytics in your website. To use this app you need your own <a href='https://www.cloudflare.com/apps/uxwizz_web_analytics'>UXWizz instance</a> (Self-hosted).",
+    "version": "1.0.0",
     "category": "analytics",
     "account": { },
     "billing": { },
@@ -10,7 +10,7 @@
         "details":{
             "Category": "Analytics",
             "Language": "English",
-            "Price": "Free to install, free to use. Bring your own Piwik server.",
+            "Price": "Free to install, free to use. Bring your own UXWizz server.",
             "Restrictions": "None",
             "CloudFlare": "<a href='http://www.cloudflare.com/terms' target='_blank'>Terms of use</a>"
         },
@@ -22,46 +22,24 @@
         },
         "interface": [
             {
-                "id": "id",
-                "type": "string",
-                "name": "Piwik Site Id",
-                "description": "The id of the your Piwik site. (HINT: It's usually 1 unless you are tracking more than one domain)"
-            },
-            {
                 "id": "domain",
                 "type": "string",
-                "name": "Piwik server url",
-                "description": "The domain name of your Piwik install."
+                "name": "UXWizz server url",
+                "description": "The domain name of your UXWizz install."
             },
             {
-                "id": "setDomainCookie",
+                "id": "trackingjavascriptfile",
                 "type": "select",
-                "name": "Track visitors across all sub-domains",
-                "description": "If set to 'Yes', when one visitor visits x.domain.com and y.domain.com, they will be counted as a unique visitor.",
+                "name": "Select Which Screen Recording Option you Prefer",
+                "description": "If set to 'Full Session Recording', it will be full session recording, if set to 'Default Recording' it will be default tracker used.",
                 "options": [
                     {
-                        "label": "Yes",
-                        "value": "true"
+                        "label": "Full Session Recording",
+                        "value": "ust-rr.min.js?v=4.4.0"
                     },
                     {
-                        "label": "No",
-                        "value": "false"
-                    }
-                ]
-            },
-            {
-                "id": "prependDomain",
-                "type": "select",
-                "name": "Prepend the site domain to the page title when tracking",
-                "description": "If someone visits the 'About' page on blog.domain.com it will be recorded as 'blog / About'. This is the easiest way to get an overview of your traffic by sub-domain.",
-                "options": [
-                    {
-                        "label": "Yes",
-                        "value": "true"
-                    },
-                    {
-                        "label": "No",
-                        "value": "false"
+                        "label": "Default Recording",
+                        "value": "ust.min.js"
                     }
                 ]
             }
