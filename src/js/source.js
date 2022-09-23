@@ -1,13 +1,13 @@
 "use strict";
 
-if (! String.prototype.startsWith) {
+if (!String.prototype.startsWith) {
   String.prototype.startsWith = function(searchString, position) {
     position = position || 0;
     return this.indexOf(searchString, position) === position;
   };
 }
 
-if (! String.prototype.endsWith) {
+if (!String.prototype.endsWith) {
   String.prototype.endsWith = function(searchString, position) {
       var subjectString = this.toString();
       if (position === undefined || position > subjectString.length) {
@@ -27,7 +27,7 @@ function truthy(val) {
         val !== "no";
 }
 
-function CfPiwik(config) {
+function CfUxWizz(config) {
 
     this.config = {
         id: 1,
@@ -49,26 +49,21 @@ function CfPiwik(config) {
 
 }
 
-CfPiwik.prototype.load = function() {
+CfUxWizz.prototype.load = function() {
 
     var url = this.getUrl();
     if(url !== false) {
 
         try {
 
-            var _paq = _paq || [];
-
-            _paq.push(["trackPageView"]);
-            _paq.push(["enableLinkTracking"]);
-            _paq.push(["setTrackerUrl", url + "piwik.php"]);
-            _paq.push(["setSiteId", this.config.id]);
+            var UST_CT = [];
+            var UST = UST || { s: Date.now(), addTag: function(tag) { UST_CT.push(tag) }};
+            UST.addEvent = UST.addTag;
+            var datenow = Date.now();
+            
 
             if (truthy(this.config.prependDomain)) {
                 _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-            }
-
-            if (truthy(this.config.setDomainCookie)) {
-                _paq.push(["setDomainCookie", "*." + document.domain]);
             }
 
             var g = document.createElement("script");
@@ -77,10 +72,11 @@ CfPiwik.prototype.load = function() {
             g.type = "text/javascript";
             g.async = true;
             g.defer = true;
-            g.src = url + "piwik.js";
+            g.src = url + "server/ust-rr.min.js?v=4.4.0";
             s.parentNode.insertBefore(g,s);
 
-            window._paq = _paq;
+            window.UST_CT = UST_CT;
+            window.UST = UST;
 
         } catch(e) { }
 
@@ -88,20 +84,20 @@ CfPiwik.prototype.load = function() {
 
 };
 
-CfPiwik.prototype.getUrl = function() {
+CfUxWizz.prototype.getUrl = function() {
 
-    if (! this.config.url) {
+    if (!this.config.url) {
         return false;
     }
 
     var url = this.config.url.toString();
     var hasProtocol = url.startsWith("http://") || url.startsWith("https://") || url.startsWith("//");
 
-    if (! hasProtocol) {
+    if (!hasProtocol) {
         url = "//" + url;
     }
 
-    if (! url.endsWith("/")) {
+    if (!url.endsWith("/")) {
         url += "/";
     }
 
