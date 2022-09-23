@@ -3,8 +3,8 @@ var fs = require("fs");
 module.exports = function(config) {
 
   // Use ENV vars on Travis and sauce.json locally to get credentials
-  if (! process.env.SAUCE_USERNAME) {
-    if (! fs.existsSync("sauce.json")) {
+  if (!process.env.SAUCE_USERNAME) {
+    if (!fs.existsSync("sauce.json")) {
       console.log("Create a sauce.json with your credentials.");
       process.exit(1);
     } else {
@@ -56,7 +56,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     sauceLabs: {
-      testName: "Cloudflare integration for Piwik unit tests"
+      testName: "Cloudflare integration for UXWizz unit tests"
     },
     captureTimeout: 240000,
     customLaunchers: customLaunchers,
