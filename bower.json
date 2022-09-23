@@ -1,9 +1,9 @@
 {
-  "name": "clouldflare-for-piwik",
+  "name": "clouldflare-for-uxwizz",
   "version": "0.1.5",
-  "homepage": "https://github.com/bradberger/piwik-cloudflare",
+  "homepage": "https://github.com/timnboys/cloudflare-uxwizz",
   "authors": [
-    "Brad Berger <brad@bradb.net>"
+    "CubeData <admin@cubedata.net>"
   ],
   "license": "MPL",
   "private": true,
