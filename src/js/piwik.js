@@ -1,5 +1,5 @@
 /* global CloudFlare: false */
-CloudFlare.define("piwik_open_source_web_analytics", ["piwik_open_source_web_analytics/config"],
+CloudFlare.define("uxwizz_web_analytics", ["uxwizz_web_analytics/config"],
     function (config) {
         /**
          * This is the CloudFlare JS template. The source code of the module itself
