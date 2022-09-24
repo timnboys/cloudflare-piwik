@@ -42,6 +42,6 @@
     "run-sequence": "^1.0.2"
   },
   "scripts": {
-    "start": "gulp"
+    "build": "gulp build"
   }
 }
