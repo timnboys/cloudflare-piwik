@@ -40,7 +40,7 @@ gulp.task("hint", function() {
 });
 
 gulp.task("build", function() {
-    return runSequence("test", ["image-min", "uglify"]);
+    return runSequence("buildprod", ["image-min", "uglify"]);
 });
 
 gulp.task("default", function() {
