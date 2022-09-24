@@ -1,11 +1,9 @@
-[![Build Status](https://semaphoreci.com/api/v1/projects/ec22e658-35b1-49f3-ba17-74f5688dc4ea/519555/badge.svg)](https://semaphoreci.com/brad/piwik-cloudflare)
-[![Code Climate](https://codeclimate.com/github/bradberger/piwik-cloudflare/badges/gpa.svg)](https://codeclimate.com/github/bradberger/piwik-cloudflare)
-[![Coverage Status](https://coveralls.io/repos/bradberger/piwik-cloudflare/badge.svg?branch=master&service=github)](https://coveralls.io/github/bradberger/piwik-cloudflare?branch=master)
+[![Build Status](https://cubedata.semaphoreci.com/badges/cloudflare-uxwizz/branches/master.svg?style=shields&key=b84204f0-0d7f-4ff5-b9da-e1e7aab63b53)](https://cubedata.semaphoreci.com/projects/cloudflare-uxwizz)
 
-This is a CloudFlare app to automatically inject Piwik tracking JavaScript
+This is a CloudFlare app to automatically inject UXWizz tracking JavaScript
 code into your CloudFlare powered website.
 
-It (currently) does not support all the Piwik JavaScript tracking code
+It (currently) does not support all the UXWizz JavaScript tracking code
 features, so feel free to submit a PR if you can add any of the features.
 We'll be happy to merge it.
 
@@ -62,4 +60,4 @@ gulp build
 
 ## To Do
 
-- Complete the tracking code options to match the Piwik dashboard.
+- Complete the tracking code options to match the UXWizz dashboard.
